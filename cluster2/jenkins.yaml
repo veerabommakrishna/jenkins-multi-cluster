@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: jenkins/jenkins:2.443.3          # ← CLUSTER2 VERSION
+        image: jenkins/jenkins:2.440.3          # ← CLUSTER2 VERSION
         ports:
         - containerPort: 8080
         env:
