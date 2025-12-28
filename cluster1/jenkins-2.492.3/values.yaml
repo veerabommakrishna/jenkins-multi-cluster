@@ -1,0 +1,18 @@
+controller:
+  image: "jenkins/jenkins"
+  tag: "2.492.3"
+  installPlugins:
+    - kubernetes:latest
+    - workflow-aggregator:latest
+    - git:latest
+  servicePort: 8080
+  serviceType: NodePort
+  
+persistence:
+  enabled: true
+  size: 8Gi
+  storageClassName: standard
+
+serviceAccount:
+  create: true
+  name: jenkins
